@@ -4,6 +4,7 @@ CevicheriaHouseApp.module('Routers', function (Routers, CevicheriaHouseApp, Back
             '': 'showDefaultView'
         },
         showDefaultView: function () {
+            CevicheriaHouseApp.ViewControllers.Main.showDefaultView();
         }
     });
 
