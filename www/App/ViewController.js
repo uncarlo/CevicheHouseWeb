@@ -1,5 +1,11 @@
 CevicheriaHouseApp.module("ViewControllers.Main", function (MainViewController, CevicheriaHouseApp, Backbone, Marionette, $, _) {
-    MainViewController.showDefaultView = function() {
+
+    MainViewController.addInitializer(function() {
         CevicheriaHouseApp.regions.render();
-    }
+    });
+
+    MainViewController.showDefaultView = function() {
+        var mainView = new CevicheriaHouseApp.Views.MainView();
+        CevicheriaHouseApp.regions.content.show(mainView);
+    };
 });
