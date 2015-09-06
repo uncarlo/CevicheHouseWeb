@@ -12,5 +12,10 @@ CevicheriaHouseApp.module("ViewControllers.Main", function (MainViewController, 
             el: '.map-container'
         });
         mapView.render();
+
+        var ourStoryView = new CevicheriaHouseApp.Views.OurStoryView({
+            el: '.instagram-feed-container'
+        });
+        ourStoryView.render();
     };
 });
