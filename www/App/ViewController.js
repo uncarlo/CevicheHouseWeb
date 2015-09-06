@@ -7,5 +7,10 @@ CevicheriaHouseApp.module("ViewControllers.Main", function (MainViewController, 
     MainViewController.showDefaultView = function() {
         var mainView = new CevicheriaHouseApp.Views.MainView();
         CevicheriaHouseApp.regions.content.show(mainView);
+
+        var mapView = new CevicheriaHouseApp.Views.MapView({
+            el: '.map-container'
+        });
+        mapView.render();
     };
 });
