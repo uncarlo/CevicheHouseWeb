@@ -14,6 +14,16 @@ module.exports = function (grunt) {
                 }
             }
         },
+        autoprefixer: {
+            options: {
+                browsers: ['last 2 versions']
+            },
+            dist: { // Target
+                files: {
+                    'Styles/main.css': 'Styles/main.css'
+                }
+            }
+        },
         watch: {
             styles: {
                 files: ['Styles/**/*.less'], // which files to watch
@@ -25,5 +35,6 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('less-watch', ['less', 'watch']);
+    grunt.registerTask('less-watch', ['watch','less']);
+    grunt.registerTask('deploy', ['autoprefixer']);
 };
