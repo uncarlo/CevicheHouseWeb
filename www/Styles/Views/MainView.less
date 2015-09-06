@@ -16,7 +16,6 @@
 
   .text {
     margin-left: 50px;
-    padding: 0;
     width: 200px;
   }
 
@@ -38,6 +37,7 @@
     margin-top: 25px;
     .facebook {
       background-image: url("../Assets/facebook.png");
+      background-repeat: no-repeat;
       float: left;
       height: 40px;
       width: 40px;
@@ -45,6 +45,7 @@
 
     .instagram {
       background-image: url("../Assets/instagram.png");
+      background-repeat: no-repeat;
       float: left;
       height: 40px;
       width: 40px;
@@ -73,6 +74,47 @@
       height: 350px;
       width: 350px;
       margin-left: 30px;
+    }
+  }
+
+  @media (max-device-width: 414px) {
+    .content {
+      width: 100%;
+    }
+
+    .logo {
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      margin: auto;
+    }
+
+    .text {
+      text-align: center;
+      margin: auto;
+      width: 100%;
+      font-size: 3em;
+    }
+
+    .social {
+      margin-left: auto;
+      margin-right: auto;
+      width: 170px;
+      height: 80px;
+      .facebook {
+        background-size: cover;
+        width: 80px;
+        height: 80px;
+      }
+      .instagram {
+        background-size: cover;
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .email {
+      font-size: 0.5em;
     }
   }
 }
